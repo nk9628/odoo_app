@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odoo Vertical Statusbar Widget - Documentation</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <div style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; padding: 2rem 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="font-size: 2.5rem;">📊</div>
+                    <div>
+                        <h1 style="font-size: 2rem; font-weight: 700; margin: 0;">Vertical Statusbar Widget</h1>
+                        <p style="opacity: 0.9; font-size: 1rem; margin: 0;">Visual approval workflow tracker for Odoo</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview Section -->
+    <div id="overview" style="padding: 3rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 2rem; margin-bottom: 2rem;">
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #1e293b; position: relative; padding-bottom: 10px; border-bottom: 2px solid #3b82f6;">Module Overview</h2>
+                <p>The <strong style="background-color: #fef3c7; padding: 2px 6px; border-radius: 4px;">Vertical Statusbar Widget</strong> is a custom Odoo component that provides a visual representation of approval stages or workflow steps. It displays a vertical timeline with clear indicators for completed, active, and pending stages.</p>
+
+                <p>This widget is perfect for tracking document approval processes, project milestones, sales pipelines, or any multi-step workflow where users need a clear visual indication of progress.</p>
+
+            </div>
+        </div>
+    </div>
+
+<!--    &lt;!&ndash; Features Section &ndash;&gt;-->
+<!--    <div id="features" style="padding: 3rem 0; background: #f8f9fa;">-->
+<!--        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">-->
+<!--            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #1e293b; position: relative; padding-bottom: 10px; border-bottom: 2px solid #3b82f6;">Features</h2>-->
+
+<!--            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">-->
+<!--                &lt;!&ndash; Feature 1 &ndash;&gt;-->
+<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
+<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">🎯</div>-->
+<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Visual Stage Indicators</h3>-->
+<!--                    <p>Clear visual cues for passed (green check), active (blue dot), and pending (gray circle) stages with connecting lines.</p>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Feature 2 &ndash;&gt;-->
+<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
+<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">🔒</div>-->
+<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Read-Only Display</h3>-->
+<!--                    <p>Non-interactive design prevents accidental stage changes, ensuring data integrity in approval workflows.</p>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Feature 3 &ndash;&gt;-->
+<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
+<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">📱</div>-->
+<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Responsive Design</h3>-->
+<!--                    <p>Automatically adapts to different screen sizes. On mobile devices, the sidebar becomes a regular form field.</p>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Feature 4 &ndash;&gt;-->
+<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
+<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">⚙️</div>-->
+<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Easy Integration</h3>-->
+<!--                    <p>Works with any Odoo selection field. Simply define your stages and assign the widget to the field.</p>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Feature 5 &ndash;&gt;-->
+<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
+<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">🎨</div>-->
+<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Custom Styling</h3>-->
+<!--                    <p>Clean, modern design that matches Odoo's aesthetic. Fully customizable CSS for branding needs.</p>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Feature 6 &ndash;&gt;-->
+<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
+<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">📋</div>-->
+<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Sidebar Placement</h3>-->
+<!--                    <p>Optional automatic right sidebar positioning that doesn't interfere with the main form layout.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <!-- Implementation Section -->
+    <div id="implementation" style="padding: 3rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 2rem; margin-bottom: 2rem;">
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #1e293b; position: relative; padding-bottom: 10px; border-bottom: 2px solid #3b82f6;">Implementation Guide</h2>
+
+                <h3 style="font-size: 1.5rem; margin: 1.5rem 0 1rem; color: #334155;">How to Implement</h3>
+
+                <!-- Steps -->
+                <div style="margin-left: 1.5rem;">
+                    <!-- Step 1 -->
+                    <div style="position: relative; margin-bottom: 1.5rem; padding-left: 3rem;">
+                        <div style="position: absolute; left: 0; top: 0; width: 2rem; height: 2rem; background-color: #3b82f6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Define the Selection Field</h4>
+                        <p>Create a selection field in your Odoo model with the stages of your workflow.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div style="position: relative; margin-bottom: 1.5rem; padding-left: 3rem;">
+                        <div style="position: absolute; left: 0; top: 0; width: 2rem; height: 2rem; background-color: #3b82f6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">2</div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Add the Widget to Your View</h4>
+                        <p>Use the <code style="background: #1e293b; color: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', Courier, monospace;">widget="vertical_state"</code> attribute on your field in the XML view.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div style="position: relative; margin-bottom: 1.5rem; padding-left: 3rem;">
+                        <div style="position: absolute; left: 0; top: 0; width: 2rem; height: 2rem; background-color: #3b82f6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">3</div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Optional Sidebar Placement</h4>
+                        <p>Wrap the field in a <code style="background: #1e293b; color: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', Courier, monospace;">oe_form_sidebar_vertical_stage</code> div for automatic right sidebar positioning.</p>
+                    </div>
+                </div>
+
+
+
+                <h3 style="font-size: 1.5rem; margin: 1.5rem 0 1rem; color: #334155;">Widget Preview</h3>
+
+                <!-- Widget Demo -->
+                <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 0; width: 100%; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
+                    <div style="padding: 16px 20px; border-bottom: 1px solid #e5e7eb; background: #f9fafb; border-radius: 8px 8px 0 0;">
+                        <h5 style="margin: 0; font-size: 15px; font-weight: 600; color: #111827;">Approval Stages</h5>
+                    </div>
+                    <div style="display: flex; flex-direction: column; padding: 20px; gap: 0;">
+                        <!-- Stage 1 -->
+                        <div style="display: flex; align-items: flex-start; position: relative; padding: 16px 0;">
+                            <div style="display: flex; flex-direction: column; align-items: center; position: relative; margin-right: 16px;">
+                                <div style="width: 32px; height: 32px; min-width: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #10b981; border: 2px solid #10b981; flex-shrink: 0; z-index: 2; position: relative;">
+                                    <span style="color: #ffffff; font-size: 16px;">✓</span>
+                                </div>
+                                <div style="position: absolute; left: 50%; transform: translateX(-50%); top: 32px; width: 2px; height: calc(100% + 16px); background: #10b981; z-index: 1;"></div>
+                            </div>
+                            <div style="flex: 1; display: flex; flex-direction: column; padding-top: 4px;">
+                                <div style="font-size: 14px; font-weight: 500; color: #6b7280; line-height: 1.5; margin-bottom: 4px;">Draft</div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 2 -->
+                        <div style="display: flex; align-items: flex-start; position: relative; padding: 16px 0;">
+                            <div style="display: flex; flex-direction: column; align-items: center; position: relative; margin-right: 16px;">
+                                <div style="width: 32px; height: 32px; min-width: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #10b981; border: 2px solid #10b981; flex-shrink: 0; z-index: 2; position: relative;">
+                                    <span style="color: #ffffff; font-size: 16px;">✓</span>
+                                </div>
+                                <div style="position: absolute; left: 50%; transform: translateX(-50%); top: 32px; width: 2px; height: calc(100% + 16px); background: #10b981; z-index: 1;"></div>
+                            </div>
+                            <div style="flex: 1; display: flex; flex-direction: column; padding-top: 4px;">
+                                <div style="font-size: 14px; font-weight: 500; color: #6b7280; line-height: 1.5; margin-bottom: 4px;">Submitted</div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 3 -->
+                        <div style="display: flex; align-items: flex-start; position: relative; padding: 16px 0;">
+                            <div style="display: flex; flex-direction: column; align-items: center; position: relative; margin-right: 16px;">
+                                <div style="width: 32px; height: 32px; min-width: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #3b82f6; border: 2px solid #3b82f6; flex-shrink: 0; z-index: 2; position: relative;">
+                                    <span style="width: 12px; height: 12px; background: #ffffff; border-radius: 50%; display: block;"></span>
+                                </div>
+                                <div style="position: absolute; left: 50%; transform: translateX(-50%); top: 32px; width: 2px; height: calc(100% + 16px); background: linear-gradient(to bottom, #3b82f6 0%, #e5e7eb 50%); z-index: 1;"></div>
+                            </div>
+                            <div style="flex: 1; display: flex; flex-direction: column; padding-top: 4px;">
+                                <div style="font-size: 14px; font-weight: 600; color: #111827; line-height: 1.5; margin-bottom: 4px;">Under Review</div>
+                                <div style="margin-top: 4px;">
+                                    <span style="display: inline-block; padding: 2px 10px; background: #3b82f6; color: #ffffff; font-size: 11px; font-weight: 600; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Current</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 4 -->
+                        <div style="display: flex; align-items: flex-start; position: relative; padding: 16px 0;">
+                            <div style="display: flex; flex-direction: column; align-items: center; position: relative; margin-right: 16px;">
+                                <div style="width: 32px; height: 32px; min-width: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #ffffff; border: 2px solid #d1d5db; flex-shrink: 0; z-index: 2; position: relative;">
+                                    <span style="width: 16px; height: 16px; border: 2px solid #d1d5db; border-radius: 50%; display: block; background: #ffffff;"></span>
+                                </div>
+                                <div style="position: absolute; left: 50%; transform: translateX(-50%); top: 32px; width: 2px; height: calc(100% + 16px); background: #e5e7eb; z-index: 1;"></div>
+                            </div>
+                            <div style="flex: 1; display: flex; flex-direction: column; padding-top: 4px;">
+                                <div style="font-size: 14px; font-weight: 500; color: #6b7280; line-height: 1.5; margin-bottom: 4px;">Approved</div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 5 -->
+                        <div style="display: flex; align-items: flex-start; position: relative; padding: 16px 0;">
+                            <div style="display: flex; flex-direction: column; align-items: center; position: relative; margin-right: 16px;">
+                                <div style="width: 32px; height: 32px; min-width: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #ffffff; border: 2px solid #d1d5db; flex-shrink: 0; z-index: 2; position: relative;">
+                                    <span style="width: 16px; height: 16px; border: 2px solid #d1d5db; border-radius: 50%; display: block; background: #ffffff;"></span>
+                                </div>
+                            </div>
+                            <div style="flex: 1; display: flex; flex-direction: column; padding-top: 4px;">
+                                <div style="font-size: 14px; font-weight: 500; color: #6b7280; line-height: 1.5; margin-bottom: 4px;">Completed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screenshot Section -->
+    <div id="screenshot" style="padding: 3rem 0; background: #f8f9fa;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 2rem; margin-bottom: 2rem;">
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #1e293b; position: relative; padding-bottom: 10px; border-bottom: 2px solid #3b82f6;">Real Implementation Example</h2>
+
+                <h3 style="font-size: 1.5rem; margin: 1.5rem 0 1rem; color: #334155;">XML View Integration Code</h3>
+                <pre style="background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; line-height: 1.5; font-family: 'Courier New', Courier, monospace;"><code>&lt;record id="view_order_form_inherit_remaining_fields" model="ir.ui.view"&gt;
+    &lt;field name="name"&gt;sale_order.form.inherit.remaining.fields&lt;/field&gt;
+    &lt;field name="model"&gt;sale_order&lt;/field&gt;
+    &lt;field name="inherit_id" ref="sale.view_order_form"/&gt;
+    &lt;field name="arch" type="xml"&gt;
+        &lt;xpath expr="//sheet" position="after"&gt;
+            &lt;div class="oe_form_sidebar_vertical_stage"&gt;
+                &lt;field name="state" widget="vertical_state" /&gt;
+            &lt;/div&gt;
+        &lt;/xpath&gt;
+    &lt;/field&gt;
+&lt;/record&gt;</code></pre>
+
+                <h3 style="font-size: 1.5rem; margin: 1.5rem 0 1rem; color: #334155;">Implementation Screenshot</h3>
+                <p style="margin-bottom: 1.5rem;">Below is a screenshot showing the Vertical Statusbar Widget integrated into an Odoo Sale Order form:</p>
+
+                <!-- Screenshot Placeholder -->
+                <div style="background: #e5e7eb; border: 2px dashed #9ca3af; border-radius: 8px; padding: 3rem; text-align: center; margin-bottom: 2rem;">
+                    <img src="/statusbar_widget/static/description/sale_image.png" alt="Vertical Statusbar Widget in Odoo" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+                </div>
+
+                <div style="background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1rem; border-radius: 4px;">
+                    <h4 style="font-size: 1.125rem; color: #1e40af; margin-bottom: 0.5rem;">Implementation Notes:</h4>
+                    <ul style="margin: 0; color: #374151;">
+                        <li>The widget is placed in the sidebar using <code>oe_form_sidebar_vertical_stage</code> class</li>
+                        <li>It uses the existing <code>state</code> field with <code>widget="vertical_state"</code></li>
+                        <li>Positioned after the main form sheet using XPath</li>
+                        <li>Automatically adapts to Odoo's responsive layout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div style="background-color: #1e293b; color: white; padding: 2rem 0; text-align: center; margin-top: 3rem;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                <p style="margin: 0;">Vertical Statusbar Widget for Odoo</p>
+<!--                <div style="display: flex; gap: 1.5rem;">-->
+<!--                    <a href="#" style="color: #cbd5e1; text-decoration: none; transition: color 0.3s;">Documentation</a>-->
+<!--                    <a href="#" style="color: #cbd5e1; text-decoration: none; transition: color 0.3s;">GitHub Repository</a>-->
+<!--                    <a href="#" style="color: #cbd5e1; text-decoration: none; transition: color 0.3s;">Odoo App Store</a>-->
+<!--                </div>-->
+                <div style="margin-top: 1rem; padding: 10px 20px; background: rgba(255, 255, 255, 0.1); border-radius: 6px;">
+                    <strong>Contact Us:</strong> moduleodoo@gmail.com
+                </div>
+<!--                <p style="margin: 0;">© 2023 Odoo Community. All rights reserved.</p>-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

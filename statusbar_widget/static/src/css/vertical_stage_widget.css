@@ -1,0 +1,311 @@
+/* Main Container */
+.tc_approval_stages_widget {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 0;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Header Section */
+.approval_stages_header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f9fafb;
+    border-radius: 8px 8px 0 0;
+}
+
+.approval_stages_header h5 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Stages Container */
+.tc_vertical_state {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 0;
+}
+
+/* Stage Item */
+.stage_item {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding: 16px 0;
+    transition: all 0.2s ease;
+}
+
+.stage_item:first-child {
+    padding-top: 0;
+}
+
+.stage_item:last-child {
+    padding-bottom: 0;
+}
+
+.stage_item.clickable {
+    cursor: pointer;
+}
+
+.stage_item.clickable:hover .stage_label {
+    color: #2563eb;
+}
+
+/* Stage Indicator Wrapper */
+.stage_indicator_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-right: 16px;
+}
+
+/* Stage Indicator Circle */
+.stage_indicator {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 2px solid #d1d5db;
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+/* Passed Stage (Green Check) */
+.stage_item.passed .stage_indicator {
+    background: #10b981;
+    border-color: #10b981;
+}
+
+.stage_item.passed .stage_indicator i {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Active Stage (Blue) */
+.stage_item.active .stage_indicator {
+    background: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.active_dot {
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Pending Stage (Gray Circle) */
+.pending_circle {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    display: block;
+    background: #ffffff;
+}
+
+/* Stage Connector Line */
+.stage_connector {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 32px;
+    width: 2px;
+    height: calc(100% + 16px);
+    background: #e5e7eb;
+    z-index: 1;
+}
+
+.stage_item.passed .stage_connector {
+    background: #10b981;
+}
+
+.stage_item.active .stage_connector {
+    background: linear-gradient(to bottom, #3b82f6 0%, #e5e7eb 50%);
+}
+
+/* Stage Content */
+.stage_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+}
+
+.stage_label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.stage_item.active .stage_label {
+    color: #111827;
+    font-weight: 600;
+}
+
+.stage_item.passed .stage_label {
+    color: #6b7280;
+}
+
+/* Current Badge */
+.stage_badge {
+    margin-top: 4px;
+}
+
+.badge_current {
+    display: inline-block;
+    padding: 2px 10px;
+    background: #3b82f6;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
+   CUSTOM SIDEBAR CLASS - AUTO RIGHT SIDE
+   ======================================== */
+
+/* Main sidebar container - Automatic right positioning */
+.oe_form_sidebar_vertical_state {
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 200px !important;
+    z-index: 10 !important;
+}
+
+/* Make parent sheet position relative */
+.o_form_view .o_form_sheet:has(.oe_form_sidebar_vertical_state) {
+    position: relative !important;
+    padding-right: 300px !important;
+}
+
+/* Alternative: If :has() not supported, use this with sheet class */
+.o_form_sheet.o_form_sheet_with_state_sidebar {
+    position: relative !important;
+    padding-right: 300px !important;
+}
+
+/* Sticky behavior for sidebar */
+.oe_form_sidebar_vertical_state {
+    position: sticky !important;
+    top: 8px !important;
+    align-self: flex-start !important;
+}
+
+/* Remove default field padding */
+.oe_form_sidebar_vertical_state .o_field_widget {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Ensure widget takes full width of sidebar */
+.oe_form_sidebar_vertical_state .tc_approval_stages_widget {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Responsive adjustments for sidebar */
+@media (max-width: 1400px) {
+    .oe_form_sidebar_vertical_state {
+        width: 200px !important;
+    }
+
+    .o_form_view .o_form_sheet:has(.oe_form_sidebar_vertical_state) {
+        padding-right: 280px !important;
+    }
+
+    .o_form_sheet.o_form_sheet_with_state_sidebar {
+        padding-right: 280px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .oe_form_sidebar_vertical_state {
+        width: 200px !important;
+    }
+
+    .o_form_view .o_form_sheet:has(.oe_form_sidebar_vertical_state) {
+        padding-right: 260px !important;
+    }
+
+    .o_form_sheet.o_form_sheet_with_state_sidebar {
+        padding-right: 260px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .oe_form_sidebar_vertical_state {
+        position: relative !important;
+        width: 100% !important;
+        margin-top: 20px !important;
+        right: auto !important;
+        top: auto !important;
+    }
+
+    .o_form_view .o_form_sheet:has(.oe_form_sidebar_vertical_state) {
+        padding-right: 0 !important;
+    }
+
+    .o_form_sheet.o_form_sheet_with_state_sidebar {
+        padding-right: 0 !important;
+    }
+}
+
+/* Legacy browser support (if :has() not supported) */
+@supports not (selector(:has(*))) {
+    .o_form_sheet {
+        position: relative !important;
+    }
+
+    .o_form_sheet:not(.o_form_sheet_no_sidebar) {
+        padding-right: 300px !important;
+    }
+}
+
+/* Field widget wrapper adjustments */
+.o_field_widget.o_field_vertical_state {
+    padding: 7px !important;
+    margin: 0 !important;
+}
+
+/* Integration with Odoo Form */
+.o_form_view .tc_approval_stages_widget {
+    position: sticky;
+    top: 20px;
+}
+
+/* Responsive Design for main widget */
+@media (max-width: 768px) {
+    .tc_approval_stages_widget {
+        min-width: 200px;
+    }
+
+    .tc_vertical_state {
+        padding: 15px;
+    }
+
+    .stage_indicator {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="statusbar_widget.VerticalStateWidget" owl="1">
+        <div class="tc_approval_stages_widget">
+            <div class="approval_stages_header">
+                <h5 t-esc="fieldLabel"/>
+            </div>
+            <div class="tc_vertical_state">
+                <t t-foreach="stages" t-as="stage" t-key="stage[0]">
+                    <div t-att-class="getStageClasses(stage[0])"
+                         t-on-click="() => onStageClick(stage[0])">
+                        <div class="stage_indicator_wrapper">
+                            <div class="stage_indicator">
+                                <t t-if="isPassed(stage[0])">
+                                    <i class="fa fa-check"/>
+                                </t>
+                                <t t-elif="isActive(stage[0])">
+                                    <span class="active_dot"></span>
+                                </t>
+                                <t t-else="">
+                                    <span class="pending_circle"></span>
+                                </t>
+                            </div>
+                            <div t-if="!stage_last" class="stage_connector"/>
+                        </div>
+                        <div class="stage_content">
+                            <div class="stage_label">
+                                <span t-esc="stage[1]"/>
+                            </div>
+                            <t t-if="isActive(stage[0])">
+                                <div class="stage_badge">
+                                    <span class="badge_current">Current</span>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+</templates>
