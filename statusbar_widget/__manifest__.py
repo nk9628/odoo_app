@@ -50,4 +50,7 @@
     'installable': True,
     'application': False,
     'license': 'LGPL-3',
+    'sequence': 2,
+    'price': 19,
+    'currency': 'USD',
 }
