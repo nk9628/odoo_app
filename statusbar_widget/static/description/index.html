@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
     <title>Odoo Vertical Statusbar Widget - Documentation</title>
 </head>
 <body>
+<section>
+    <div class="container"
+         style="font-family: 'Inter', sans-serif !important;background-color: #fff !important;">
     <!-- Header Section -->
     <div style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; padding: 2rem 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
@@ -35,56 +50,6 @@
         </div>
     </div>
 
-<!--    &lt;!&ndash; Features Section &ndash;&gt;-->
-<!--    <div id="features" style="padding: 3rem 0; background: #f8f9fa;">-->
-<!--        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">-->
-<!--            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #1e293b; position: relative; padding-bottom: 10px; border-bottom: 2px solid #3b82f6;">Features</h2>-->
-
-<!--            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">-->
-<!--                &lt;!&ndash; Feature 1 &ndash;&gt;-->
-<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
-<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">🎯</div>-->
-<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Visual Stage Indicators</h3>-->
-<!--                    <p>Clear visual cues for passed (green check), active (blue dot), and pending (gray circle) stages with connecting lines.</p>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Feature 2 &ndash;&gt;-->
-<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
-<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">🔒</div>-->
-<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Read-Only Display</h3>-->
-<!--                    <p>Non-interactive design prevents accidental stage changes, ensuring data integrity in approval workflows.</p>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Feature 3 &ndash;&gt;-->
-<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
-<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">📱</div>-->
-<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Responsive Design</h3>-->
-<!--                    <p>Automatically adapts to different screen sizes. On mobile devices, the sidebar becomes a regular form field.</p>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Feature 4 &ndash;&gt;-->
-<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
-<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">⚙️</div>-->
-<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Easy Integration</h3>-->
-<!--                    <p>Works with any Odoo selection field. Simply define your stages and assign the widget to the field.</p>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Feature 5 &ndash;&gt;-->
-<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
-<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">🎨</div>-->
-<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Custom Styling</h3>-->
-<!--                    <p>Clean, modern design that matches Odoo's aesthetic. Fully customizable CSS for branding needs.</p>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Feature 6 &ndash;&gt;-->
-<!--                <div style="background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s;">-->
-<!--                    <div style="font-size: 2rem; color: #3b82f6; margin-bottom: 1rem;">📋</div>-->
-<!--                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #334155;">Sidebar Placement</h3>-->
-<!--                    <p>Optional automatic right sidebar positioning that doesn't interfere with the main form layout.</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
 
     <!-- Implementation Section -->
     <div id="implementation" style="padding: 3rem 0;">
@@ -225,7 +190,7 @@
 
                 <!-- Screenshot Placeholder -->
                 <div style="background: #e5e7eb; border: 2px dashed #9ca3af; border-radius: 8px; padding: 3rem; text-align: center; margin-bottom: 2rem;">
-                    <img src="/statusbar_widget/static/description/sale_image.png" alt="Vertical Statusbar Widget in Odoo" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+                    <img src="description/sale_image.png" alt="Vertical Statusbar Widget in Odoo" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
                 </div>
 
                 <div style="background: #dbeafe; border-left: 4px solid #3b82f6; padding: 1rem; border-radius: 4px;">
@@ -258,5 +223,7 @@
             </div>
         </div>
     </div>
+    </div>
+</section>
 </body>
 </html>
